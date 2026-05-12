@@ -1,5 +1,16 @@
 body {
-    background-color: darkslategrey;
+    background-color: black;
     color: white;
     font-family: "Ubuntu", sans-serif;
+    margin: 0;
+}
+
+header {
+    background-color: darkslategrey;
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
+
+h1 {
+    text-align: center;
 }
