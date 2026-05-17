@@ -1,8 +1,9 @@
 body {
-    background-color: black;
-    color: white;
+    background-color: #121212;
+    color: #e0e0e0;
     font-family: "Ubuntu", sans-serif;
     margin: 0;
+    padding-bottom: 50px;
 }
 
 header {
@@ -11,6 +12,35 @@ header {
     padding-bottom: 5px;
 }
 
+section {
+    padding: 30px 10%;
+    border-bottom: 1px solid #333;
+}
+
+#About {
+    text-align: center;
+}
+
+#About img {
+    margin: 15px;
+    border-radius: 8px;
+    max-width: 100%;
+    height: auto;
+}
+
 h1 {
     text-align: center;
+    font-size: 45px;
+    font-weight: 900;
+    letter-spacing: 2px;
+    margin: 0 0 10px 0;
+    color: #00ffcc;
+    text-transform: uppercase;
+}
+
+h2 {
+    font-size: 30px;
+    font-weight: 700;
+    color: #00ffcc;
+    margin-bottom: 20px;
 }
