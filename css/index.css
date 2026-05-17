@@ -1,0 +1,117 @@
+body {
+    background-color: #121212;
+    color: #e0e0e0;
+    font-family: "Ubuntu", sans-serif;
+    margin: 0;
+    padding-bottom: 50px;
+}
+
+header {
+    background-color: darkslategrey;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    padding: 15px 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+}
+
+nav a {
+    color: #e0e0e0;
+    text-decoration: none;
+    margin: 0 15px;
+    font-weight: 500;
+    transition: color 0.3s;
+}
+
+nav a:hover {
+    color: #00e6b8;
+}
+
+section {
+    padding: 30px 10%;
+    border-bottom: 1px solid #333;
+}
+
+#About {
+    text-align: center;
+}
+
+#About img {
+    margin: 15px;
+    border-radius: 8px;
+    max-width: 100%;
+    height: auto;
+}
+
+p {
+    font-size: 16px;
+    line-height: 1.6;
+}
+
+h1 {
+    text-align: center;
+    font-size: 45px;
+    font-weight: 900;
+    letter-spacing: 2px;
+    margin: 0 0 10px 0;
+    color: #00ffcc;
+    text-transform: uppercase;
+}
+
+h2 {
+    font-size: 30px;
+    font-weight: 700;
+    color: #00ffcc;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.job-container {
+    background-color: #1e1e1e;
+    padding: 20px;
+    border-radius: 8px;
+    border-left: #00ffcc 4px solid;
+}
+
+.job-header {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    font-weight: bold;
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+.job-date{
+    color: #00ffcc;
+}
+
+.job-description {
+    margin: 5px 0;
+    line-height: 1.6;
+}
+
+#Connect {
+    border-bottom: none;
+}
+
+#Connect .icon-container {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    margin-top: 20px;
+}
+
+#Connect a {
+    color: #e0e0e0;
+    font-size: 40px;
+    transition: transform 0.3s, color 0.3s;
+}
+
+#Connect a:hover {
+    color: #00e6b8;
+    transform: scale(1.2);
+}
