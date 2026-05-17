@@ -61,4 +61,23 @@ h2 {
     font-weight: 700;
     color: #00ffcc;
     margin-bottom: 20px;
+    text-align: center;
+}
+
+#Connect .icon-container {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    margin-top: 20px;
+}
+
+#Connect a {
+    color: #e0e0e0;
+    font-size: 40px;
+    transition: transform 0.3s, color 0.3s;
+}
+
+#Connect a:hover {
+    color: #00e6b8;
+    transform: scale(1.2);
 }
