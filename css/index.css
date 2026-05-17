@@ -8,8 +8,26 @@ body {
 
 header {
     background-color: darkslategrey;
-    padding-top: 5px;
-    padding-bottom: 5px;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    padding: 15px 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+}
+
+nav a {
+    color: #e0e0e0;
+    text-decoration: none;
+    margin: 0 15px;
+    font-weight: 500;
+    transition: color 0.3s;
+}
+
+nav a:hover {
+    color: #00e6b8;
 }
 
 section {
