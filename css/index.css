@@ -46,6 +46,11 @@ section {
     height: auto;
 }
 
+p {
+    font-size: 16px;
+    line-height: 1.6;
+}
+
 h1 {
     text-align: center;
     font-size: 45px;
@@ -62,6 +67,35 @@ h2 {
     color: #00ffcc;
     margin-bottom: 20px;
     text-align: center;
+}
+
+.job-container {
+    background-color: #1e1e1e;
+    padding: 20px;
+    border-radius: 8px;
+    border-left: #00ffcc 4px solid;
+}
+
+.job-header {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    font-weight: bold;
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+.job-date{
+    color: #00ffcc;
+}
+
+.job-description {
+    margin: 5px 0;
+    line-height: 1.6;
+}
+
+#Connect {
+    border-bottom: none;
 }
 
 #Connect .icon-container {
