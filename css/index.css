@@ -137,7 +137,7 @@ h2 {
     transform: scale(1.2); /* Slightly enlarge the icon on hover for a more interactive feel */
 }
 
-#Skills ul {
+#skills ul {
     display: flex; /* Use flexbox to layout the skill items */
     flex-wrap: wrap; /* Allow items to wrap to the next line if necessary */
     gap: 15px; /* Add space between skill items */
@@ -146,7 +146,7 @@ h2 {
     justify-content: center; /* Center the skill items horizontally */
 }
 
-#Skills li {
+#skills li {
     background-color: #1e1e1e;
     color: #e0e0e0;
     padding: 10px 20px; /* Add padding for better spacing */
@@ -157,7 +157,7 @@ h2 {
     transition: background-color 0.3s, color 0.3s; /* Smooth transition for hover effects */
 }
 
-#Skills li:hover {
+#skills li:hover {
     background-color: darkslategrey; /* Change background color on hover for better interactivity */
     border-color:#00ffcc; /* Keep the border color the same on hover for consistency */
     color: #00ffcc; /* Change text color on hover to match the border for a cohesive look */
