@@ -1,29 +1,28 @@
 body {
     background-color: #121212;
     color: #e0e0e0;
-    font-family: "Ubuntu", sans-serif;
-    margin: 0;
-    padding-bottom: 50px;
+    font-family: "Ubuntu", sans-serif; /* Added Google Fonts for entire page, with fallback to sans-serif */
+    margin: 0; /* Remove default margin */
 }
 
 header {
     background-color: darkslategrey;
-    position: sticky;
-    top: 0;
-    z-index: 1000;
-    padding: 15px 20px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+    position: sticky; /* Make the header sticky */
+    top: 0; /* Stick to the top of the viewport */
+    z-index: 1000;  /* Ensure the header is above other content */
+    padding: 15px 20px; /* Add padding for better spacing */
+    display: flex;  /* Use flexbox for layout */
+    flex-direction: column; /* Stack items vertically */
+    align-items: center; /* Center items horizontally */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5); /* Add a shadow for better visibility */
 }
 
 nav a {
     color: #e0e0e0;
-    text-decoration: none;
-    margin: 0 15px;
-    font-weight: 500;
-    transition: color 0.3s;
+    text-decoration: none; /* Remove underline from links */
+    margin: 0 15px; /* Add horizontal spacing between links */
+    font-weight: 500; /* Make the links slightly bolder */
+    transition: color 0.3s; /* Smooth transition for hover effect */
 }
 
 nav a:hover {
@@ -31,8 +30,30 @@ nav a:hover {
 }
 
 section {
-    padding: 30px 10%;
-    border-bottom: 1px solid #333;
+    padding: 30px 10%; /* Add padding and horizontal margins for better spacing */
+    border-bottom: 1px solid #333; /* Add a subtle border between sections */
+}
+
+#Pics {
+    display: flex; /* Use flexbox to layout the images */
+    justify-content: center; /* Center the images horizontally */
+    align-items: center; /* Center the images vertically */
+    gap: 20px; /* Space between images */
+    padding: 40px 5%; /* Add padding around the section */
+}
+
+#Pics img {
+    width: 28%; /* Set a default width for side images to take up about 28% of the row width */
+    height: auto; /* Maintain aspect ratio */
+    border-radius: 8px; /* Add rounded corners */
+    border: 1px solid #333; /* Add a subtle border */
+    transition: transform 0.3s, ease; /* Smooth transition for hover effect */
+}
+
+#Pics img.featured-pic {
+    width: 36%; /* Make the middle image larger to take up about 36% of the row width */
+    border: 2px solid #00ffcc; /* Highlight the middle image with a different border */
+    box-shadow: 0 4px 20px rgba(0, 255, 204, 0.2); /* Add a subtle shadow to make it stand out */
 }
 
 #About {
@@ -40,49 +61,49 @@ section {
 }
 
 #About img {
-    margin: 15px;
-    border-radius: 8px;
-    max-width: 100%;
-    height: auto;
+    margin: 15px; /* Add margin around the image */
+    border-radius: 8px; /* Add rounded corners */
+    max-width: 100%; /* Ensure the image is responsive and does not exceed the container width */
+    height: auto; /* Maintain aspect ratio */
 }
 
 p {
     font-size: 16px;
-    line-height: 1.6;
+    line-height: 1.6; /* Increase line height for better readability */
 }
 
 h1 {
     text-align: center;
     font-size: 45px;
-    font-weight: 900;
-    letter-spacing: 2px;
-    margin: 0 0 10px 0;
+    font-weight: 900; /* Make the title bold and impactful */
+    letter-spacing: 2px; /* Add letter spacing for a more dramatic effect */
+    margin: 15px 0 10px 0; /* Adjust margins for better spacing around the title */
     color: #00ffcc;
-    text-transform: uppercase;
+    text-transform: uppercase; /* Transform the title to uppercase for a stronger presence */
 }
 
 h2 {
     font-size: 30px;
-    font-weight: 700;
+    font-weight: 700; /* Make section headers bold */
     color: #00ffcc;
-    margin-bottom: 20px;
-    text-align: center;
+    margin-bottom: 20px; /* Add margin below section headers for better spacing */
+    text-align: center; /* Center section headers for a more cohesive look */
 }
 
 .job-container {
     background-color: #1e1e1e;
-    padding: 20px;
-    border-radius: 8px;
-    border-left: #00ffcc 4px solid;
+    padding: 20px; /* Add padding for better spacing */
+    border-radius: 8px; /* Add rounded corners */
+    border-left: #00ffcc 4px solid; /* Add a left border to highlight each job entry */
 }
 
 .job-header {
-    display: flex;
-    justify-content: space-between;
-    flex-wrap: wrap;
-    font-weight: bold;
+    display: flex; /* Use flexbox to layout the job title and date */
+    justify-content: space-between; /* Space out the job title and date to opposite ends */
+    flex-wrap: wrap; /* Allow wrapping on smaller screens */
+    font-weight: bold; /* Make the job title bold */
     font-size: 18px;
-    margin-bottom: 10px;
+    margin-bottom: 10px; /* Add margin below the job header for better spacing */
 }
 
 .job-date{
@@ -90,28 +111,63 @@ h2 {
 }
 
 .job-description {
-    margin: 5px 0;
-    line-height: 1.6;
+    margin: 5px 0; /* Add margin above and below the job description for better spacing */
+    line-height: 1.6; /* Increase line height for better readability */
 }
 
 #Connect {
-    border-bottom: none;
+    border-bottom: none; /* Remove bottom border from the Connect section */
 }
 
 #Connect .icon-container {
-    display: flex;
-    justify-content: center;
-    gap: 30px;
-    margin-top: 20px;
+    display: flex; /* Use flexbox to layout the icons */
+    justify-content: center; /* Center the icons horizontally */
+    gap: 30px; /* Add space between the icons */
+    margin-top: 20px; /* Add margin above the icons for better spacing */
 }
 
 #Connect a {
     color: #e0e0e0;
     font-size: 40px;
-    transition: transform 0.3s, color 0.3s;
+    transition: transform 0.3s, color 0.3s; /* Smooth transition for hover effects */
 }
 
 #Connect a:hover {
     color: #00e6b8;
-    transform: scale(1.2);
+    transform: scale(1.2); /* Slightly enlarge the icon on hover for a more interactive feel */
+}
+
+#Skills ul {
+    display: flex; /* Use flexbox to layout the skill items */
+    flex-wrap: wrap; /* Allow items to wrap to the next line if necessary */
+    gap: 15px; /* Add space between skill items */
+    padding: 0; /* Remove default padding from the list */
+    list-style-type: none; /* Remove default list styling */
+    justify-content: center; /* Center the skill items horizontally */
+}
+
+#Skills li {
+    background-color: #1e1e1e;
+    color: #e0e0e0;
+    padding: 10px 20px; /* Add padding for better spacing */
+    border-radius: 20px; /* Add rounded corners to make pill shape*/
+    font-size: 14px;
+    font-weight: 500; /* Make skill items slightly bolder */
+    border: #00ffcc 2px solid; /* Add a border to skill items for better visibility */
+    transition: background-color 0.3s, color 0.3s; /* Smooth transition for hover effects */
+}
+
+#Skills li:hover {
+    background-color: darkslategrey; /* Change background color on hover for better interactivity */
+    border-color:#00ffcc; /* Keep the border color the same on hover for consistency */
+    color: #00ffcc; /* Change text color on hover to match the border for a cohesive look */
+}
+
+footer {
+    text-align: center; /* Center the footer content */
+    padding: 20px 0; /* Add padding for better spacing */
+    background-color: #1e1e1e;
+    color: #e0e0e0;
+    margin-top: 30px; /* Add margin above the footer for better spacing */
+    border-top: 1px solid #333; /* Add a subtle border above the footer */
 }
