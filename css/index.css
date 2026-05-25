@@ -19,10 +19,10 @@ header {
 
 nav ul {
     list-style-type: none; /* Remove default list styling */
-    display: flex; /* Use flexbox to layout the navigation links */
+    display: flex;
     gap: 20px; /* Add space between navigation items */
-    padding: 0; /* Remove default padding from the list */
-    margin: 0; /* Remove default margin from the list */
+    padding: 0;
+    margin: 0;
 }
 
 nav a {
@@ -38,16 +38,16 @@ nav a:hover {
 }
 
 section {
-    padding: 30px 10%; /* Add padding and horizontal margins for better spacing */
+    padding: 30px 10%;
     border-bottom: 1px solid #333; /* Add a subtle border between sections */
 }
 
 #Pics {
-    display: flex; /* Use flexbox to layout the images */
+    display: flex; 
     justify-content: center; /* Center the images horizontally */
     align-items: center; /* Center the images vertically */
-    gap: 20px; /* Space between images */
-    padding: 40px 5%; /* Add padding around the section */
+    gap: 20px;
+    padding: 40px 5%;
 }
 
 #Pics img {
@@ -69,10 +69,10 @@ section {
 }
 
 #About img {
-    margin: 15px; /* Add margin around the image */
-    border-radius: 8px; /* Add rounded corners */
+    margin: 15px;
+    border-radius: 8px;
     max-width: 100%; /* Ensure the image is responsive and does not exceed the container width */
-    height: auto; /* Maintain aspect ratio */
+    height: auto;
 }
 
 p {
@@ -83,35 +83,35 @@ p {
 h1 {
     text-align: center;
     font-size: 45px;
-    font-weight: 900; /* Make the title bold and impactful */
+    font-weight: 900;
     letter-spacing: 2px; /* Add letter spacing for a more dramatic effect */
-    margin: 15px 0 10px 0; /* Adjust margins for better spacing around the title */
+    margin: 15px 0 10px 0;
     color: #00ffcc;
     text-transform: uppercase; /* Transform the title to uppercase for a stronger presence */
 }
 
 h2 {
     font-size: 30px;
-    font-weight: 700; /* Make section headers bold */
+    font-weight: 700;
     color: #00ffcc;
-    margin-bottom: 20px; /* Add margin below section headers for better spacing */
-    text-align: center; /* Center section headers for a more cohesive look */
+    margin-bottom: 20px;
+    text-align: center;
 }
 
 .job-container {
     background-color: #1e1e1e;
-    padding: 20px; /* Add padding for better spacing */
-    border-radius: 8px; /* Add rounded corners */
+    padding: 20px;
+    border-radius: 8px;
     border-left: #00ffcc 4px solid; /* Add a left border to highlight each job entry */
 }
 
 .job-header {
-    display: flex; /* Use flexbox to layout the job title and date */
+    display: flex;
     justify-content: space-between; /* Space out the job title and date to opposite ends */
     flex-wrap: wrap; /* Allow wrapping on smaller screens */
-    font-weight: bold; /* Make the job title bold */
+    font-weight: bold;
     font-size: 18px;
-    margin-bottom: 10px; /* Add margin below the job header for better spacing */
+    margin-bottom: 10px;
 }
 
 .job-date{
@@ -119,8 +119,8 @@ h2 {
 }
 
 .job-description {
-    margin: 5px 0; /* Add margin above and below the job description for better spacing */
-    line-height: 1.6; /* Increase line height for better readability */
+    margin: 5px 0;
+    line-height: 1.6;
 }
 
 #Connect {
@@ -128,10 +128,10 @@ h2 {
 }
 
 #Connect .icon-container {
-    display: flex; /* Use flexbox to layout the icons */
-    justify-content: center; /* Center the icons horizontally */
-    gap: 30px; /* Add space between the icons */
-    margin-top: 20px; /* Add margin above the icons for better spacing */
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    margin-top: 20px;
 }
 
 #Connect a {
@@ -146,36 +146,36 @@ h2 {
 }
 
 #Skills ul {
-    display: flex; /* Use flexbox to layout the skill items */
+    display: flex;
     flex-wrap: wrap; /* Allow items to wrap to the next line if necessary */
-    gap: 15px; /* Add space between skill items */
-    padding: 0; /* Remove default padding from the list */
+    gap: 15px;
+    padding: 0;
     list-style-type: none; /* Remove default list styling */
-    justify-content: center; /* Center the skill items horizontally */
+    justify-content: center;
 }
 
 #Skills li {
     background-color: #1e1e1e;
     color: #e0e0e0;
-    padding: 10px 20px; /* Add padding for better spacing */
-    border-radius: 20px; /* Add rounded corners to make pill shape*/
+    padding: 10px 20px;
+    border-radius: 20px;
     font-size: 14px;
-    font-weight: 500; /* Make skill items slightly bolder */
+    font-weight: 500;
     border: #00ffcc 2px solid; /* Add a border to skill items for better visibility */
     transition: background-color 0.3s, color 0.3s; /* Smooth transition for hover effects */
 }
 
 #Skills li:hover {
-    background-color: darkslategrey; /* Change background color on hover for better interactivity */
-    border-color:#00ffcc; /* Keep the border color the same on hover for consistency */
-    color: #00ffcc; /* Change text color on hover to match the border for a cohesive look */
+    background-color: darkslategrey;
+    border-color:#00ffcc;
+    color: #00ffcc;
 }
 
 footer {
-    text-align: center; /* Center the footer content */
-    padding: 20px 0; /* Add padding for better spacing */
+    text-align: center;
+    padding: 20px 0;
     background-color: #1e1e1e;
     color: #e0e0e0;
-    margin-top: 30px; /* Add margin above the footer for better spacing */
-    border-top: 1px solid #333; /* Add a subtle border above the footer */
+    margin-top: 30px;
+    border-top: 1px solid #333;
 }
