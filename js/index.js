@@ -11,7 +11,7 @@ copyright.innerHTML = `&copy; Demetrius Edwards ${thisYear}`; // Set the inner H
 footer.appendChild(copyright); // Append the copyright paragraph to the footer element
 
 const skills = ['JavaScript', 'React', 'Node.js', 'Java', 'Spring Boot', 'MySQL', 'HTML', 'CSS']; // Create an array of skills to be displayed in the Skills section of the webpage
-const skillsSection = document.getElementById("skills"); // Select the Skills section of the webpage using its ID to append the list of skills to it
+const skillsSection = document.getElementById("Skills"); // Select the Skills section of the webpage using its ID to append the list of skills to it
 const skillsList = skillsSection.querySelector("ul"); // Select the unordered list element within the Skills section to append individual skill items to it
 
 /* 
