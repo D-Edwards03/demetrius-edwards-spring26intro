@@ -39,7 +39,6 @@ nav a:hover {
 
 section {
     padding: 30px 10%;
-    border-bottom: 1px solid #333; /* Add a subtle border between sections */
 }
 
 #Pics {
@@ -121,10 +120,6 @@ h2 {
 .job-description {
     margin: 5px 0;
     line-height: 1.6;
-}
-
-#Connect {
-    border-bottom: none; /* Remove bottom border from the Connect section */
 }
 
 #Connect .icon-container {
