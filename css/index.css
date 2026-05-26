@@ -54,7 +54,7 @@ section {
     height: auto; /* Maintain aspect ratio */
     border-radius: 8px; /* Add rounded corners */
     border: 1px solid #333; /* Add a subtle border */
-    transition: transform 0.3s, ease; /* Smooth transition for hover effect */
+    transition: transform 0.3s ease; /* Smooth transition for hover effect */
 }
 
 #Pics img.featured-pic {
@@ -131,7 +131,7 @@ h2 {
 
 #Connect a {
     color: #e0e0e0;
-    font-size: 40px;
+    font-size: 60px;
     transition: transform 0.3s, color 0.3s; /* Smooth transition for hover effects */
 }
 
@@ -164,6 +164,96 @@ h2 {
     background-color: darkslategrey;
     border-color:#00ffcc;
     color: #00ffcc;
+}
+
+form[name="leave_message"] {
+    max-width: 500px;
+    margin: 0 auto;
+    background: #1e1e1e;
+    padding: 25px;
+    border-radius: 8px;
+}
+
+form input[type="text"],
+form input[type="email"],
+form textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #333;
+    border-radius: 4px;
+    background-color: #121212;
+    color: #e0e0e0;
+    font-family: "Ubuntu", sans-serif;
+    box-sizing: border-box; /* Ensure padding does not affect total width */
+}
+
+form input:focus,
+form textarea:focus {
+    border-color: #00ffcc;
+    outline: none; /* Remove default focus outline */
+}
+
+form button,
+#Messages button {
+    background-color: darkslategrey;
+    color: #e0e0e0;
+    border: 1px solid #00ffcc;
+    padding: 10px 20px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background 0.2s ease;
+    display: block;
+    margin: 0 auto;
+}
+
+form button:hover,
+#Messages button:hover {
+    background-color: #00e6b8;
+    color: #121212;
+}
+
+#Messages ul {
+    list-style: none;
+    padding: 0;
+    max-width: 1000px;
+    margin: 20px auto;
+    
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+}
+
+#Messages li {
+    background: #1e1e1e;
+    padding: 15px;
+    border-radius: 6px;
+    margin-bottom: 10px;
+    border-left: 3px solid #00ffcc;
+
+    box-sizing: border-box;
+    width: calc(33.333% - 14px);
+    min-width: 280px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 15px;
+}
+
+#Messages button + button {
+    margin-left: 3px;
+}
+
+#Messages li button{
+    align-self: flex-end;
+}
+
+#Messages a {
+    color: #00ffcc;
+    text-decoration: none;
 }
 
 footer {
