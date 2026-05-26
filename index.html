@@ -28,6 +28,7 @@
           <li><a href="#Skills">Skills</a></li>
           <li><a href="#Projects">Projects</a></li>
           <li><a href="#Connect">Connect</a></li>
+          <li><a href="#LeaveMessage">Leave a Message</a></li>
         </ul>
       </nav>
     </header>
@@ -115,13 +116,58 @@
       <section id="Connect">
         <h2>Connect</h2>
         <div class="icon-container">
-          <a href="https://www.linkedin.com/in/demetrius-edwards03"
-            ><i class="fa-brands fa-linkedin"></i
+          <a
+            href="https://www.linkedin.com/in/demetrius-edwards03"
+            target="_blank"
+            rel="noopener noreferrer"
+            ><i class="fa-brands fa-linkedin fa-bounce"></i
           ></a>
-          <a href="https://github.com/D-Edwards03"
-            ><i class="fa-brands fa-github"></i
+          <a
+            href="https://github.com/D-Edwards03"
+            target="_blank"
+            rel="noopener noreferrer"
+            ><i
+              class="fa-brands fa-github fa-flip"
+              style="--fa-flip-x: 1; --fa-flip-y: 0"
+            ></i
           ></a>
         </div>
+      </section>
+
+      <section id="LeaveMessage">
+        <h2>Leave a Message</h2>
+        <form name="leave_message">
+          <label id="name-label" for="usersName">Name:</label><br />
+          <input
+            type="text"
+            id="usersName"
+            name="usersName"
+            placeholder="please enter full name"
+            required
+          /><br /><br />
+          <label id="email-label" for="usersEmail">Email:</label><br />
+          <input
+            type="email"
+            id="usersEmail"
+            name="usersEmail"
+            placeholder="email@example.com"
+            required
+          /><br /><br />
+          <label id="messages-label" for="usersMessage">Message:</label><br />
+          <textarea
+            name="usersMessage"
+            id="usersMessage"
+            placeholder="please enter your message"
+            required
+          ></textarea
+          ><br /><br />
+          <button type="submit">Submit</button>
+        </form>
+      </section>
+
+      <section id="Messages" style="display: none">
+        <h2>Messages</h2>
+        <ul></ul>
       </section>
     </main>
 
