@@ -29,12 +29,13 @@ messageForm.addEventListener("submit", function(event) {
   event.preventDefault();
   const name = messageForm.usersName.value;
   const email = messageForm.usersEmail.value;
-  const message = messageForm.usersMessages.value;
+  const message = messageForm.usersMessage.value;
 
   console.log(`Name: ${name}, Email: ${email}, Message: ${message}`);
 
   const messageSection = document.getElementById("Messages");
   const messageList = messageSection.querySelector("ul");
+  messageSection.style.display = "block"; // Show the Messages section when a new message is submitted
   const newMessage = document.createElement("li");
   newMessage.innerHTML = `<a href="mailto:${email}">${name}</a> <span>${message}</span>`;
 
@@ -44,8 +45,32 @@ messageForm.addEventListener("submit", function(event) {
   removeButton.addEventListener("click", function() {
     const entry = removeButton.parentNode;
     entry.remove();
+
+    if (messageList.children.length === 0) {
+      messageSection.style.display = "none"; // Hide the Messages section if there are no messages left after removing one
+    }
   });
 
+  const editButton = document.createElement("button");
+  editButton.innerText = "edit";
+  editButton.type = "button";
+  editButton.style.marginLeft = "5px";
+  editButton.addEventListener("click", function() {
+    const entry = editButton.parentNode;
+    const messageSpan = entry.querySelector("span")
+    
+    if (editButton.innerText === "edit") {
+      const currentText = messageSpan.innerText;
+      messageSpan.innerHTML = `<input type="text" value="${currentText}">`;
+      editButton.innerText = "save";
+    } else {
+      const newInput = messageSpan.querySelector("input");
+      messageSpan.innerText = `${newInput.value}`;
+      editButton.innerText = "edit";
+    }
+  });
+
+  newMessage.appendChild(editButton);
   newMessage.appendChild(removeButton);
 
   messageList.appendChild(newMessage);
