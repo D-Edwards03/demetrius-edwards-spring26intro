@@ -33,7 +33,7 @@ messageForm.addEventListener("submit", function(event) {
 
   console.log(`Name: ${name}, Email: ${email}, Message: ${message}`);
 
-  const messageSection = document.getElementById("Messages");
+  const messageSection = document.getElementById("messages");
   const messageList = messageSection.querySelector("ul");
   messageSection.style.display = "block"; // Show the Messages section when a new message is submitted
   const newMessage = document.createElement("li");

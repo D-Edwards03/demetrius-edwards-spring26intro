@@ -194,7 +194,7 @@ form textarea:focus {
 }
 
 form button,
-#Messages button {
+#messages button {
     background-color: darkslategrey;
     color: #e0e0e0;
     border: 1px solid #00ffcc;
@@ -208,12 +208,12 @@ form button,
 }
 
 form button:hover,
-#Messages button:hover {
+#messages button:hover {
     background-color: #00e6b8;
     color: #121212;
 }
 
-#Messages ul {
+#messages ul {
     list-style: none;
     padding: 0;
     max-width: 1000px;
@@ -226,7 +226,7 @@ form button:hover,
     justify-content: center;
 }
 
-#Messages li {
+#messages li {
     background: #1e1e1e;
     padding: 15px;
     border-radius: 6px;
@@ -243,15 +243,15 @@ form button:hover,
     gap: 15px;
 }
 
-#Messages button + button {
+#messages button + button {
     margin-left: 3px;
 }
 
-#Messages li button{
+#messages li button{
     align-self: flex-end;
 }
 
-#Messages a {
+#messages a {
     color: #00ffcc;
     text-decoration: none;
 }
