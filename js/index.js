@@ -18,11 +18,11 @@ const skillsList = skillsSection.querySelector("ul"); // Select the unordered li
 Loop through the skills array, create a list item for each skill, 
 set its text to the skill name, and append it to the unordered list in the Skills section
 */
-for (let i = 0; i < skills.length; i++) {
+skills.forEach(skillText => {
   const skill = document.createElement("li");
-  skill.innerText = skills[i];
+  skill.innerText = skillText;
   skillsList.appendChild(skill);
-}
+});
 
 const messageForm = document.forms["leave_message"];
 messageForm.addEventListener("submit", function(event) {
@@ -76,4 +76,22 @@ messageForm.addEventListener("submit", function(event) {
   messageList.appendChild(newMessage);
 
   messageForm.reset();
+});
+
+const hamburgerMenu = document.getElementById("hamburger-menu");
+const navLinks = document.getElementById("nav-links");
+hamburgerMenu.addEventListener("click", function() {
+  // Toggle the "show-menu" class on the navigation links to show/hide them when the hamburger menu is clicked
+  navLinks.classList.toggle("show-menu");
+});
+
+const navItems = navLinks.querySelectorAll("a");
+navItems.forEach(item => {
+  item.addEventListener("click", function() {
+    /* Check if the screen width is 768px or less (mobile view), 
+     and if so, remove the "show-menu" class to hide the navigation links after a link is clicked */
+    if (window.innerWidth <= 768) {
+      navLinks.classList.remove("show-menu");
+    }
+  });
 });

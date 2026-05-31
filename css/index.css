@@ -1,8 +1,14 @@
+html {
+    scroll-behavior: smooth; /* Enable smooth scrolling for anchor links */
+}
+
 body {
     background-color: #121212;
     color: #e0e0e0;
     font-family: "Ubuntu", sans-serif; /* Added Google Fonts for entire page, with fallback to sans-serif */
     margin: 0; /* Remove default margin */
+    overflow-x: hidden; /* Prevent horizontal scrolling */
+    width: 100%; /* Ensure body takes full width of the viewport */
 }
 
 header {
@@ -15,6 +21,27 @@ header {
     flex-direction: column; /* Stack items vertically */
     align-items: center; /* Center items horizontally */
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5); /* Add a shadow for better visibility */
+}
+
+nav {
+    width: 100%;
+    display: flex;
+    flex-direction: column; /* Stack navigation items vertically on smaller screens */
+    align-items: center; /* Center navigation items horizontally */
+}
+
+#hamburger-menu {
+    display: none; /* Hide hamburger menu by default */
+    background: none;
+    border: none;
+    color: #e0e0e0;
+    font-size: 28px;
+    cursor: pointer;
+    transition: color 0.3s ease;
+}
+
+#hamburger-menu:hover {
+    color:#00ffcc;
 }
 
 nav ul {
@@ -263,4 +290,29 @@ footer {
     color: #e0e0e0;
     margin-top: 30px;
     border-top: 1px solid #333;
+}
+
+@media (max-width: 768px) {
+    header {
+        align-items: stretch; /* Make header items stretch to full width on smaller screens */
+    }
+
+    #hamburger-menu {
+        display: block; /* Show hamburger menu on smaller screens */
+        align-self: flex-end; /* Align hamburger menu to the right */
+        padding: 5px 15px;
+    }
+
+    #nav-links {
+        display: none; /* Hide navigation links by default on smaller screens */
+        flex-direction: column;
+        width: 100%;
+        text-align: center;
+        gap: 20px;
+        margin-top: 20px 0; 
+    }
+
+    #nav-links.show-menu {
+        display: flex; /* Show navigation links when hamburger menu is toggled */
+    }
 }
