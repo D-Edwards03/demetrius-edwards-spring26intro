@@ -129,6 +129,11 @@ h2 {
     padding: 20px;
     border-radius: 8px;
     border-left: #00ffcc 4px solid; /* Add a left border to highlight each job entry */
+    margin-bottom: 20px;
+}
+
+.job-container:last-child {
+    margin-bottom: 0; /* Remove bottom margin for the last job entry */
 }
 
 .job-header {
