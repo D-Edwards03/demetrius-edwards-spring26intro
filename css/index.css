@@ -320,4 +320,13 @@ footer {
     #nav-links.show-menu {
         display: flex; /* Show navigation links when hamburger menu is toggled */
     }
+
+    #Pics {
+        flex-direction: column; /* Stack images vertically on smaller screens */
+    }
+
+    #Pics img, #Pics img.featured-pic {
+        width: 80%; /* Make images take up more width on smaller screens */
+        margin-bottom: 15px;
+    }
 }
