@@ -24,6 +24,7 @@ skills.forEach(skillText => {
   skillsList.appendChild(skill);
 });
 
+
 const messageForm = document.forms["leave_message"];
 messageForm.addEventListener("submit", function(event) {
   event.preventDefault();
@@ -78,6 +79,7 @@ messageForm.addEventListener("submit", function(event) {
   messageForm.reset();
 });
 
+
 const hamburgerMenu = document.getElementById("hamburger-menu");
 const navLinks = document.getElementById("nav-links");
 hamburgerMenu.addEventListener("click", function() {
@@ -95,3 +97,30 @@ navItems.forEach(item => {
     }
   });
 });
+
+
+const githubUsername = 'D-Edwards03'
+const url = `https://api.github.com/users/${githubUsername}/repos`;
+
+fetch(url)
+  .then(response => response.json()) // Parse the response as JSON to get the list of repositories
+  .then(repositories => {
+    // Select the Projects section of the webpage using its ID to append the list of repositories to it
+    const projectSection = document.getElementById("Projects"); 
+    // Select the unordered list element within the Projects section to append individual repository items to it
+    const projectList = projectSection.querySelector("ul");
+
+    for (let i = 0; i < repositories.length; i++) {
+      const project = document.createElement("li"); // Create a list item for each repository
+      project.innerText = repositories[i].name; // Set the text of the list item to the name of the repository
+      projectList.appendChild(project); // Append the list item to the unordered list in the Projects section
+    }
+  })
+  .catch(error => {
+    console.error('Error fetching repositories:', error); // Log any errors that occur during the fetch operation to the console for debugging purposes
+    const projectsSection = document.getElementById("Projects"); // Select the Projects section of the webpage to append an error message to it if the fetch operation fails
+    const projectsList = projectsSection.querySelector("ul"); // Select the unordered list element within the Projects section to append an error message to it if the fetch operation fails
+    const errorMessage = document.createElement("li"); // Create a list item to hold the error message if the fetch operation fails
+    errorMessage.innerText = "Unable to load projects at this time.";
+    projectsList.appendChild(errorMessage);
+  });
