@@ -105,6 +105,7 @@ const url = `https://api.github.com/users/${githubUsername}/repos`;
 fetch(url)
   .then(response => response.json()) // Parse the response as JSON to get the list of repositories
   .then(repositories => {
+    console.log('Fetched repositories:', repositories); // Log the fetched repositories to the console for debugging purposes
     // Select the Projects section of the webpage using its ID to append the list of repositories to it
     const projectSection = document.getElementById("Projects"); 
     // Select the unordered list element within the Projects section to append individual repository items to it
