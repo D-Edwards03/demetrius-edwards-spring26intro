@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Art Institute API | Demetrius Edwards</title>
+
+    <script
+      src="https://kit.fontawesome.com/83068f7933.js"
+      crossorigin="anonymous"
+    ></script>
+    <link rel="stylesheet" href="css/api.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <header>
+      <nav>
+        <ul id="nav-links">
+          <li>
+            <a href="index.html"><i class="fa-solid fa-house"></i> Home</a>
+          </li>
+        </ul>
+      </nav>
+    </header>
+
+    <main>
+      <h1>Art Institute of Chicago Explorer</h1>
+      <p class="intro">
+        Explore masterworks and current exhibitions pulled directly from the Art
+        Institute's public API.
+      </p>
+
+      <div class="api-nav">
+        <button id="btn-artworks" class="api-btn">Explore Artworks</button>
+        <button id="btn-exhibitions" class="api-btn">
+          View Current Exhibitions
+        </button>
+      </div>
+
+      <section id="api-content" class="grid-container"></section>
+    </main>
+
+    <script src="js/api.js"></script>
+  </body>
+</html>
