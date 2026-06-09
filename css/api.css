@@ -113,7 +113,7 @@ h1 {
     margin-bottom: 10px;
 }
 
-.error-message {
+.error {
     color: #ff4c4c;
     font-weight: bold;
     text-align: center;
