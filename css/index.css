@@ -308,7 +308,6 @@ footer {
 #Projects li {
     background-color: #1e1e1e;
     color: #e0e0e0;
-    padding: 25px 20px;
     border-radius: 8px;
     border: 1px solid #333;
     text-align: center;
@@ -316,6 +315,13 @@ footer {
     font-weight: 500;
     letter-spacing: 1px;
     transition: transform 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease, color 0.3s ease;
+}
+
+#Projects li a {
+    color: inherit; /* Inherit text color from the list item */
+    text-decoration: none;
+    display: block;
+    padding: 25px 20px;
 }
 
 #Projects li:hover {

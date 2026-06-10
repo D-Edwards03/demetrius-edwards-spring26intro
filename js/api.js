@@ -92,6 +92,3 @@ function displayExhibitions(exhibitions) {
 // Event Listeners
 btnArtworks.addEventListener('click', fetchArtworks);
 btnExhibitions.addEventListener('click', fetchExhibitions);
-
-// Fetch artworks by default on page load
-//fetchArtworks();

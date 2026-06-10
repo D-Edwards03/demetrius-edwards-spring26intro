@@ -10,7 +10,16 @@ const copyright = document.createElement("p"); // Create a new paragraph element
 copyright.innerHTML = `&copy; Demetrius Edwards ${thisYear}`; // Set the inner HTML of the paragraph to include the copyright symbol, name, and current year
 footer.appendChild(copyright); // Append the copyright paragraph to the footer element
 
-const skills = ['JavaScript', 'React', 'Node.js', 'Java', 'Spring Boot', 'MySQL', 'HTML', 'CSS']; // Create an array of skills to be displayed in the Skills section of the webpage
+const skills = [
+  "JavaScript",
+  "React",
+  "Node.js",
+  "Java",
+  "Spring Boot",
+  "MySQL",
+  "HTML",
+  "CSS",
+]; // Create an array of skills to be displayed in the Skills section of the webpage
 const skillsSection = document.getElementById("Skills"); // Select the Skills section of the webpage using its ID to append the list of skills to it
 const skillsList = skillsSection.querySelector("ul"); // Select the unordered list element within the Skills section to append individual skill items to it
 
@@ -18,15 +27,14 @@ const skillsList = skillsSection.querySelector("ul"); // Select the unordered li
 Loop through the skills array, create a list item for each skill, 
 set its text to the skill name, and append it to the unordered list in the Skills section
 */
-skills.forEach(skillText => {
+skills.forEach((skillText) => {
   const skill = document.createElement("li");
   skill.innerText = skillText;
   skillsList.appendChild(skill);
 });
 
-
 const messageForm = document.forms["leave_message"];
-messageForm.addEventListener("submit", function(event) {
+messageForm.addEventListener("submit", function (event) {
   event.preventDefault();
   const name = messageForm.usersName.value;
   const email = messageForm.usersEmail.value;
@@ -43,7 +51,7 @@ messageForm.addEventListener("submit", function(event) {
   const removeButton = document.createElement("button");
   removeButton.innerText = "remove";
   removeButton.type = "button";
-  removeButton.addEventListener("click", function() {
+  removeButton.addEventListener("click", function () {
     const entry = removeButton.parentNode;
     entry.remove();
 
@@ -56,10 +64,10 @@ messageForm.addEventListener("submit", function(event) {
   editButton.innerText = "edit";
   editButton.type = "button";
   editButton.style.marginLeft = "5px";
-  editButton.addEventListener("click", function() {
+  editButton.addEventListener("click", function () {
     const entry = editButton.parentNode;
-    const messageSpan = entry.querySelector("span")
-    
+    const messageSpan = entry.querySelector("span");
+
     if (editButton.innerText === "edit") {
       const currentText = messageSpan.innerText;
       messageSpan.innerHTML = `<input type="text" value="${currentText}">`;
@@ -79,17 +87,16 @@ messageForm.addEventListener("submit", function(event) {
   messageForm.reset();
 });
 
-
 const hamburgerMenu = document.getElementById("hamburger-menu");
 const navLinks = document.getElementById("nav-links");
-hamburgerMenu.addEventListener("click", function() {
+hamburgerMenu.addEventListener("click", function () {
   // Toggle the "show-menu" class on the navigation links to show/hide them when the hamburger menu is clicked
   navLinks.classList.toggle("show-menu");
 });
 
 const navItems = navLinks.querySelectorAll("a");
-navItems.forEach(item => {
-  item.addEventListener("click", function() {
+navItems.forEach((item) => {
+  item.addEventListener("click", function () {
     /* Check if the screen width is 768px or less (mobile view), 
      and if so, remove the "show-menu" class to hide the navigation links after a link is clicked */
     if (window.innerWidth <= 768) {
@@ -98,28 +105,31 @@ navItems.forEach(item => {
   });
 });
 
-
-const githubUsername = 'D-Edwards03'
+const githubUsername = "D-Edwards03";
 const url = `https://api.github.com/users/${githubUsername}/repos`;
 
 fetch(url)
-  .then(response => response.json()) // Parse the response as JSON to get the list of repositories
-  .then(repositories => {
+  .then((response) => response.json()) // Parse the response as JSON to get the list of repositories
+  .then((repositories) => {
     console.log(repositories); // Log the fetched repositories to the console for debugging purposes
-    
+
     // Select the Projects section of the webpage using its ID to append the list of repositories to it
-    const projectSection = document.getElementById("Projects"); 
+    const projectSection = document.getElementById("Projects");
     // Select the unordered list element within the Projects section to append individual repository items to it
     const projectList = projectSection.querySelector("ul");
 
     for (let i = 0; i < repositories.length; i++) {
       const project = document.createElement("li"); // Create a list item for each repository
-      project.innerText = repositories[i].name; // Set the text of the list item to the name of the repository
+      const repoLink = document.createElement("a");
+      repoLink.href = repositories[i].html_url; // Set the href of the link to the repository's URL
+      repoLink.target = "_blank"; // Open the link in a new tab
+      repoLink.innerText = repositories[i].name; // Set the text of the link to the name of the repository
+      project.appendChild(repoLink); // Append the link to the list item
       projectList.appendChild(project); // Append the list item to the unordered list in the Projects section
     }
   })
-  .catch(error => {
-    console.error('Error fetching repositories:', error); // Log any errors that occur during the fetch operation to the console for debugging purposes
+  .catch((error) => {
+    console.error("Error fetching repositories:", error); // Log any errors that occur during the fetch operation to the console for debugging purposes
     const projectsSection = document.getElementById("Projects"); // Select the Projects section of the webpage to append an error message to it if the fetch operation fails
     const projectsList = projectsSection.querySelector("ul"); // Select the unordered list element within the Projects section to append an error message to it if the fetch operation fails
     const errorMessage = document.createElement("li"); // Create a list item to hold the error message if the fetch operation fails
