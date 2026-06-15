@@ -74,11 +74,13 @@ section {
     align-items: center; /* Center the images vertically */
     gap: 20px;
     padding: 40px 5%;
+    flex-wrap: wrap; /* Allow images to wrap to the next line on smaller screens */
 }
 
 #Pics img {
     width: 28%; /* Set a default width for side images to take up about 28% of the row width */
-    height: auto; /* Maintain aspect ratio */
+    aspect-ratio: 1/1;
+    object-fit: cover; /* Ensure images cover the area without distortion */
     border-radius: 8px; /* Add rounded corners */
     border: 1px solid #333; /* Add a subtle border */
     transition: transform 0.3s ease; /* Smooth transition for hover effect */
@@ -98,7 +100,7 @@ section {
     margin: 15px;
     border-radius: 8px;
     max-width: 100%; /* Ensure the image is responsive and does not exceed the container width */
-    height: auto;
+    height: 400px;
 }
 
 p {
